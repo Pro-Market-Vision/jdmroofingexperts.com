@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Residential Roofing",
+    "description": "Residential roofing is the process of installing, repairing, and maintaining the roofs of residential homes. It involves various materials and techniques to ensure the roof is durable, weather-resistant, and aesthetically pleasing.",
+    "image": "/images/services/residential.jpg"
+  },
+  {
+    "name": "Commercial Roofing",
+    "description": "Commercial roofing involves the installation, repair, and maintenance of roofs on commercial buildings, such as offices, warehouses, retail stores, and industrial facilities.",
+    "image": "/images/services/commercial.jpg"
+  },
+  {
+    "name": "Copper Roofing",
+    "description": "Choosing JDM Roofing for your copper roofing needs means opting for unparalleled craftsmanship and exceptional customer service. Our experienced professionals use the finest materials and latest techniques.",
+    "image": "/images/services/copper.webp"
+  },
+  {
+    "name": "Roof Maintenance",
+    "description": "Roof maintenance involves regular inspections, cleaning, and repairs to ensure the longevity and functionality of a roof. Proper maintenance helps prevent minor issues from becoming major problems.",
+    "image": "/images/services/maintenance.jpg"
+  },
+  {
+    "name": "Roof Coatings",
+    "description": "Roof coatings are protective layers applied to the surface of a roof to enhance its durability, extend its lifespan, and improve its performance against environmental elements.",
+    "image": "/images/services/coatings.webp"
+  }
+]
