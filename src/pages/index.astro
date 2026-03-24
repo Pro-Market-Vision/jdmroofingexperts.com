@@ -3,17 +3,20 @@ import Layout from '../layouts/Layout.astro';
 import services from '../data/services.json';
 ---
 
-<Layout title="JDM Roofing Repair & Installation | Expert Roofing in Miami, Orlando & Fort Lauderdale">
+<Layout
+  title="Roofing Repair Fort Lauderdale | JDM Roofing Experts"
+  description="JDM Roofing — expert roofing repair & installation in Fort Lauderdale, Miami & Orlando. Residential & commercial. Free estimates. Call (954) 727-5425."
+>
 
   <!-- Hero -->
   <section class="relative bg-primary text-white py-24 md:py-32 overflow-hidden">
-    <div class="absolute inset-0 bg-cover bg-center opacity-20" style="background-image: url('/images/services/residential.jpg')"></div>
+    <div class="absolute inset-0 bg-cover bg-center opacity-20" style="background-image: url('/images/services/residential.jpg')" role="img" aria-label="Residential roofing installation by JDM Roofing in Fort Lauderdale"></div>
     <div class="relative max-w-7xl mx-auto px-4 text-center">
-      <h1 class="font-heading text-5xl md:text-7xl tracking-wide mb-4">Expert Roofing Repair And Installation</h1>
+      <h1 class="font-heading text-5xl md:text-7xl tracking-wide mb-4">Expert Roofing Repair & Installation in Fort Lauderdale</h1>
       <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-2">
-        JDM Roofing provides expert roofing repair and installation services. Trust our experienced team for reliable, high-quality roofing solutions tailored to your needs.
+        JDM Roofing provides expert roofing repair and installation services for residential and commercial properties. Trust our experienced team for reliable, high-quality roofing solutions in South Florida.
       </p>
-      <p class="text-accent font-heading text-xl tracking-wide mb-8">Miami, Orlando & Fort Lauderdale</p>
+      <p class="text-accent font-heading text-xl tracking-wide mb-8">Serving Miami, Orlando & Fort Lauderdale</p>
       <a href="/contact" class="inline-flex bg-accent text-white font-heading text-xl tracking-wide px-8 py-4 rounded hover:bg-yellow-700 transition-colors">GET A FREE ESTIMATE</a>
     </div>
   </section>
@@ -21,11 +24,13 @@ import services from '../data/services.json';
   <!-- Services -->
   <section class="py-16 bg-white" id="services">
     <div class="max-w-7xl mx-auto px-4">
+      <h2 class="font-heading text-4xl md:text-5xl text-center tracking-wide text-primary mb-2">Our Roofing Services</h2>
+      <p class="text-gray-500 text-center mb-10 max-w-2xl mx-auto">From residential repairs to commercial installations, we deliver top-quality roofing solutions in Fort Lauderdale and across South Florida.</p>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((s) => (
           <div class="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-gray-border/30">
             <div class="aspect-[4/3] overflow-hidden">
-              <img src={s.image} alt={s.name} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              <img src={s.image} alt={`${s.name} service by JDM Roofing in Fort Lauderdale`} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
             </div>
             <div class="p-6">
               <h3 class="font-heading text-2xl tracking-wide text-primary mb-2">{s.name}</h3>
@@ -41,14 +46,14 @@ import services from '../data/services.json';
   <section class="py-16 bg-gray-light">
     <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
       <div>
-        <h2 class="font-heading text-4xl md:text-5xl tracking-wide text-primary mb-4">Trusted JDM Roofing Repair and Installation</h2>
+        <h2 class="font-heading text-4xl md:text-5xl tracking-wide text-primary mb-4">Trusted Roofing Contractor in Fort Lauderdale</h2>
         <p class="text-gray-600 leading-relaxed mb-6">
-          JDM Roofing Repair and Installation offers expert roofing repair and installation services, ensuring that your roof is durable, safe, and aesthetically pleasing. Our team of skilled professionals is dedicated to providing top-notch service, whether you need a simple repair or a complete roof replacement.
+          JDM Roofing Repair and Installation offers expert <a href="/contact" class="text-accent hover:underline">roofing repair and installation</a> services, ensuring that your roof is durable, safe, and aesthetically pleasing. Our team of skilled professionals is dedicated to providing top-notch service, whether you need a simple repair or a complete roof replacement.
         </p>
-        <a href="/about-us" class="inline-flex bg-primary text-white font-heading text-lg tracking-wide px-6 py-3 rounded hover:bg-dark transition-colors">LEARN MORE</a>
+        <a href="/about-us" class="inline-flex bg-primary text-white font-heading text-lg tracking-wide px-6 py-3 rounded hover:bg-dark transition-colors">LEARN MORE ABOUT US</a>
       </div>
       <div>
-        <img src="/images/about.webp" alt="JDM Roofing" class="rounded-lg shadow-lg w-full" />
+        <img src="/images/about.webp" alt="JDM Roofing team installing a new roof in Fort Lauderdale" class="rounded-lg shadow-lg w-full" loading="lazy" />
       </div>
     </div>
   </section>
@@ -62,21 +67,21 @@ import services from '../data/services.json';
             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
           </div>
           <h3 class="font-heading text-2xl tracking-wide text-primary mb-2">Fully Insured</h3>
-          <p class="text-gray-600 text-sm">JDM Roofing offers fully insured expert roofing repair and installation services. Rely on our expert team for top-quality, dependable roofing solutions.</p>
+          <p class="text-gray-600 text-sm">JDM Roofing is fully insured, giving you peace of mind with every roofing project we undertake.</p>
         </div>
         <div class="text-center p-8 bg-gray-light rounded-lg">
           <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" /></svg>
           </div>
           <h3 class="font-heading text-2xl tracking-wide text-primary mb-2">Free Estimates</h3>
-          <p class="text-gray-600 text-sm">JDM Roofing provides top-notch expert roofing repair and installation services with free estimates.</p>
+          <p class="text-gray-600 text-sm">Get a free, no-obligation estimate for any roofing repair or installation project.</p>
         </div>
         <div class="text-center p-8 bg-gray-light rounded-lg">
           <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" /></svg>
           </div>
-          <h3 class="font-heading text-2xl tracking-wide text-primary mb-2">Satisfied Customers</h3>
-          <p class="text-gray-600 text-sm">4.9-star rating on Google, reflecting our dedication to excellence in every project.</p>
+          <h3 class="font-heading text-2xl tracking-wide text-primary mb-2">4.9-Star Google Rating</h3>
+          <p class="text-gray-600 text-sm">Our 4.9-star Google rating reflects our dedication to excellence in every roofing project.</p>
         </div>
       </div>
     </div>
@@ -85,10 +90,10 @@ import services from '../data/services.json';
   <!-- CTA -->
   <section class="py-16 bg-primary text-white text-center">
     <div class="max-w-3xl mx-auto px-4">
-      <h2 class="font-heading text-4xl md:text-5xl tracking-wide mb-4">Ready to Get Started?</h2>
-      <p class="text-gray-300 mb-8">Contact us today for a free estimate on your roofing project.</p>
+      <h2 class="font-heading text-4xl md:text-5xl tracking-wide mb-4">Ready to Start Your Roofing Project?</h2>
+      <p class="text-gray-300 mb-8">Contact JDM Roofing today for a free estimate on your residential or commercial roofing project in Fort Lauderdale.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="tel:9547275425" class="bg-accent text-white font-heading text-xl tracking-wide px-8 py-4 rounded hover:bg-yellow-700 transition-colors">954-727-5425</a>
+        <a href="tel:9547275425" class="bg-accent text-white font-heading text-xl tracking-wide px-8 py-4 rounded hover:bg-yellow-700 transition-colors" aria-label="Call JDM Roofing">(954) 727-5425</a>
         <a href="/contact" class="border-2 border-white text-white font-heading text-xl tracking-wide px-8 py-4 rounded hover:bg-white hover:text-primary transition-colors">FREE ESTIMATE</a>
       </div>
     </div>

@@ -2,37 +2,40 @@
 import Layout from '../layouts/Layout.astro';
 
 const galleryImages = [
-  { src: "/images/gallery/Residential-Roofing.webp", alt: "Residential Roofing" },
-  { src: "/images/gallery/Commercial-Roofing.webp", alt: "Commercial Roofing" },
-  { src: "/images/gallery/Roof-Coatings.webp", alt: "Roof Coatings" },
-  { src: "/images/gallery/Expert-Residential-Roofing.webp", alt: "Expert Residential Roofing" },
-  { src: "/images/gallery/Copper-Roofing.webp", alt: "Copper Roofing" },
-  { src: "/images/gallery/Tile-Roofing.webp", alt: "Tile Roofing" },
-  { src: "/images/gallery/Metal-Roofing-jdm-repair.webp", alt: "Metal Roofing" },
-  { src: "/images/gallery/Skylights.webp", alt: "Skylights" },
-  { src: "/images/gallery/Industries.webp", alt: "Industries" },
-  { src: "/images/gallery/Apartment-Roofing.webp", alt: "Apartment Roofing" },
-  { src: "/images/gallery/Church-Roofing-by-JDM.webp", alt: "Church Roofing" },
-  { src: "/images/gallery/Office-Building-Roofing.webp", alt: "Office Building Roofing" },
+  { src: "/images/gallery/Residential-Roofing.webp", alt: "Residential roof installation by JDM Roofing in Fort Lauderdale" },
+  { src: "/images/gallery/Commercial-Roofing.webp", alt: "Commercial roofing project completed by JDM Roofing in Miami" },
+  { src: "/images/gallery/Roof-Coatings.webp", alt: "Protective roof coating applied on a commercial building in South Florida" },
+  { src: "/images/gallery/Expert-Residential-Roofing.webp", alt: "Expert residential roofing repair in Fort Lauderdale by JDM Roofing" },
+  { src: "/images/gallery/Copper-Roofing.webp", alt: "Custom copper roof installation on a luxury home in Fort Lauderdale" },
+  { src: "/images/gallery/Tile-Roofing.webp", alt: "Tile roof replacement on a residential property in Miami" },
+  { src: "/images/gallery/Metal-Roofing-jdm-repair.webp", alt: "Standing seam metal roof installation by JDM Roofing" },
+  { src: "/images/gallery/Skylights.webp", alt: "Skylight installation on a residential roof in Fort Lauderdale" },
+  { src: "/images/gallery/Industries.webp", alt: "Industrial roofing project completed by JDM Roofing in South Florida" },
+  { src: "/images/gallery/Apartment-Roofing.webp", alt: "Apartment complex roofing replacement in Miami by JDM Roofing" },
+  { src: "/images/gallery/Church-Roofing-by-JDM.webp", alt: "Church roofing restoration project by JDM Roofing in Fort Lauderdale" },
+  { src: "/images/gallery/Office-Building-Roofing.webp", alt: "Office building roofing installation in Orlando by JDM Roofing" },
 ];
 ---
 
-<Layout title="Gallery | JDM Roofing Repair & Installation">
+<Layout
+  title="Roofing Project Gallery | JDM Roofing Fort Lauderdale"
+  description="View our roofing project gallery — residential, commercial, copper, tile & metal roof installations by JDM Roofing in Fort Lauderdale, Miami & Orlando."
+>
   <section class="relative bg-primary text-white py-20 md:py-24">
     <div class="relative max-w-7xl mx-auto px-4 text-center">
-      <h1 class="font-heading text-5xl md:text-7xl tracking-wide mb-4">Gallery</h1>
+      <h1 class="font-heading text-5xl md:text-7xl tracking-wide mb-4">Roofing Project Gallery</h1>
       <p class="text-gray-300 text-lg max-w-2xl mx-auto">
-        At JDM Roofing Repair And Installation, we pride ourselves on being the premier local roofing contractor in your area. With over 20 years of experience.
+        At JDM Roofing Repair And Installation, we pride ourselves on being the premier local roofing contractor with over 20 years of experience. Browse our completed projects below.
       </p>
-      <p class="text-accent font-heading text-xl tracking-wide mt-4">Miami, Orlando & Fort Lauderdale</p>
+      <p class="text-accent font-heading text-xl tracking-wide mt-4">Serving Miami, Orlando & Fort Lauderdale</p>
     </div>
   </section>
 
   <section class="py-16 bg-white">
     <div class="max-w-7xl mx-auto px-4">
-      <h2 class="font-heading text-4xl md:text-5xl text-center tracking-wide text-primary mb-2">Our Recent Works</h2>
+      <h2 class="font-heading text-4xl md:text-5xl text-center tracking-wide text-primary mb-2">Our Recent Roofing Projects</h2>
       <p class="text-gray-500 text-center mb-10 max-w-2xl mx-auto">
-        JDM Roofing Repair and Installation prides itself on delivering exceptional roofing solutions. Check out our Gallery to see our top-quality installations and repairs.
+        JDM Roofing delivers exceptional roofing solutions for homes and businesses. Check out our top-quality installations and repairs across South Florida.
       </p>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         {galleryImages.map((img) => (
@@ -40,6 +43,9 @@ const galleryImages = [
             <img src={img.src} alt={img.alt} class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
           </div>
         ))}
+      </div>
+      <div class="text-center mt-10">
+        <a href="/contact" class="inline-flex bg-accent text-white font-heading text-xl tracking-wide px-8 py-4 rounded hover:bg-yellow-700 transition-colors">GET A FREE ESTIMATE</a>
       </div>
     </div>
   </section>
