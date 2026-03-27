@@ -1,10 +1,40 @@
 ---
-const navItems = [
-  { name: "Home", href: "/" },
-  { name: "About Us", href: "/about-us" },
-  { name: "Services", href: "/#services" },
-  { name: "Gallery", href: "/gallery" },
-  { name: "Contact", href: "/contact" },
+const serviceGroups = {
+  residential: [
+    { name: "Residential Roofing", href: "/service/residential-roofing" },
+    { name: "CertainTeed Shingles", href: "/service/certainteed-shingles" },
+    { name: "GAF Shingles", href: "/service/gaf-shingles" },
+    { name: "Owens Corning Shingles", href: "/service/owens-corning-shingles" },
+    { name: "Tamko Shingles", href: "/service/tamko-shingles" },
+    { name: "Low-Slope Roofing", href: "/service/residential-low-slope-roofing" },
+  ],
+  commercial: [
+    { name: "Commercial Roofing", href: "/service/commercial-roofing" },
+    { name: "Roof Maintenance", href: "/service/roof-maintenance" },
+    { name: "Roof Coatings", href: "/service/roof-coatings" },
+    { name: "Copper Roofing", href: "/service/copper-roofing" },
+    { name: "Tile Roofing", href: "/service/tile-roofing" },
+    { name: "Metal Roofing", href: "/service/metal-roofing" },
+    { name: "Skylights", href: "/service/skylights" },
+  ],
+  industries: [
+    { name: "Industries", href: "/service/industries" },
+    { name: "Apartment Roofing", href: "/service/apartment-roofing" },
+    { name: "Church Roofing", href: "/service/church-roofing" },
+    { name: "Condo Roofing", href: "/service/condo-roofing" },
+    { name: "High-Rise Roofing", href: "/service/high-rise-roofing" },
+    { name: "Office Building", href: "/service/office-building-roofing" },
+    { name: "School Roofing", href: "/service/school-roofing" },
+    { name: "Mall Roofing", href: "/service/mall-roofing" },
+    { name: "Shopping Center", href: "/service/shopping-center-roofing" },
+    { name: "Warehouse Roofing", href: "/service/warehouse-roofing" },
+  ],
+};
+
+const locations = [
+  { name: "Fort Lauderdale", href: "/location/jdm-roofing-repair-and-installation-fort-lauderdale" },
+  { name: "Miami", href: "/location/jdm-roofing-installation-miami" },
+  { name: "Orlando", href: "/location/jdm-roofing-installation-orlando" },
 ];
 ---
 
@@ -22,10 +52,57 @@ const navItems = [
       <img src="/images/logo.png" alt="JDM Roofing Repair & Installation - Expert Roofing in Fort Lauderdale" class="h-20 w-auto" />
     </a>
 
-    <nav class="hidden lg:flex items-center gap-8" aria-label="Main navigation">
-      {navItems.map((item) => (
-        <a href={item.href} class="font-heading text-lg tracking-wide text-primary hover:text-accent py-2">{item.name.toUpperCase()}</a>
-      ))}
+    <nav class="hidden lg:flex items-center gap-6" aria-label="Main navigation">
+      <a href="/" class="font-heading text-lg tracking-wide text-primary hover:text-accent py-2">HOME</a>
+      <a href="/about-us" class="font-heading text-lg tracking-wide text-primary hover:text-accent py-2">ABOUT US</a>
+
+      <!-- Services Dropdown -->
+      <div class="relative group">
+        <button class="font-heading text-lg tracking-wide text-primary hover:text-accent flex items-center gap-1 py-2" aria-label="View roofing services">
+          SERVICES
+          <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+        </button>
+        <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+          <div class="bg-white shadow-xl rounded-lg py-4 min-w-[700px] border border-gray-100 grid grid-cols-3 gap-4 px-4">
+            <div>
+              <h4 class="font-heading text-sm tracking-wide text-accent mb-2 px-2">RESIDENTIAL</h4>
+              {serviceGroups.residential.map((s) => (
+                <a href={s.href} class="block px-2 py-1.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-primary transition-colors rounded">{s.name}</a>
+              ))}
+            </div>
+            <div>
+              <h4 class="font-heading text-sm tracking-wide text-accent mb-2 px-2">COMMERCIAL</h4>
+              {serviceGroups.commercial.map((s) => (
+                <a href={s.href} class="block px-2 py-1.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-primary transition-colors rounded">{s.name}</a>
+              ))}
+            </div>
+            <div>
+              <h4 class="font-heading text-sm tracking-wide text-accent mb-2 px-2">INDUSTRIES</h4>
+              {serviceGroups.industries.map((s) => (
+                <a href={s.href} class="block px-2 py-1.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-primary transition-colors rounded">{s.name}</a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Locations Dropdown -->
+      <div class="relative group">
+        <button class="font-heading text-lg tracking-wide text-primary hover:text-accent flex items-center gap-1 py-2" aria-label="View service locations">
+          LOCATIONS
+          <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+        </button>
+        <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+          <div class="bg-white shadow-xl rounded-lg py-2 min-w-[220px] border border-gray-100">
+            {locations.map((l) => (
+              <a href={l.href} class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-primary transition-colors">{l.name}</a>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <a href="/gallery" class="font-heading text-lg tracking-wide text-primary hover:text-accent py-2">GALLERY</a>
+      <a href="/contact" class="font-heading text-lg tracking-wide text-primary hover:text-accent py-2">CONTACT</a>
     </nav>
 
     <a href="tel:9547275425" class="hidden lg:inline-flex bg-accent text-white font-heading text-lg tracking-wide px-6 py-3 rounded hover:bg-yellow-700 transition-colors" aria-label="Call now for a free roofing estimate">CALL NOW</a>
@@ -37,9 +114,44 @@ const navItems = [
 
   <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100">
     <div class="px-4 py-4 space-y-3">
-      {navItems.map((item) => (
-        <a href={item.href} class="block font-heading text-lg tracking-wide text-primary py-2">{item.name.toUpperCase()}</a>
-      ))}
+      <a href="/" class="block font-heading text-lg tracking-wide text-primary py-2">HOME</a>
+      <a href="/about-us" class="block font-heading text-lg tracking-wide text-primary py-2">ABOUT US</a>
+
+      <div>
+        <button class="mobile-dropdown-btn w-full flex justify-between items-center font-heading text-lg tracking-wide text-primary py-2">
+          SERVICES
+          <svg class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+        </button>
+        <div class="mobile-dropdown hidden pl-4 space-y-1 pb-2">
+          <p class="text-xs font-heading text-accent tracking-wide mt-2 mb-1">RESIDENTIAL</p>
+          {serviceGroups.residential.map((s) => (
+            <a href={s.href} class="block text-sm text-gray-600 py-1">{s.name}</a>
+          ))}
+          <p class="text-xs font-heading text-accent tracking-wide mt-3 mb-1">COMMERCIAL</p>
+          {serviceGroups.commercial.map((s) => (
+            <a href={s.href} class="block text-sm text-gray-600 py-1">{s.name}</a>
+          ))}
+          <p class="text-xs font-heading text-accent tracking-wide mt-3 mb-1">INDUSTRIES</p>
+          {serviceGroups.industries.map((s) => (
+            <a href={s.href} class="block text-sm text-gray-600 py-1">{s.name}</a>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <button class="mobile-dropdown-btn w-full flex justify-between items-center font-heading text-lg tracking-wide text-primary py-2">
+          LOCATIONS
+          <svg class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+        </button>
+        <div class="mobile-dropdown hidden pl-4 space-y-1 pb-2">
+          {locations.map((l) => (
+            <a href={l.href} class="block text-sm text-gray-600 py-1">{l.name}</a>
+          ))}
+        </div>
+      </div>
+
+      <a href="/gallery" class="block font-heading text-lg tracking-wide text-primary py-2">GALLERY</a>
+      <a href="/contact" class="block font-heading text-lg tracking-wide text-primary py-2">CONTACT</a>
       <a href="tel:9547275425" class="block bg-accent text-white font-heading text-lg tracking-wide px-6 py-3 rounded text-center mt-4">CALL NOW</a>
     </div>
   </div>
@@ -48,5 +160,11 @@ const navItems = [
 <script>
   document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
     document.getElementById('mobile-menu')?.classList.toggle('hidden');
+  });
+  document.querySelectorAll('.mobile-dropdown-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.nextElementSibling?.classList.toggle('hidden');
+      btn.querySelector('svg')?.classList.toggle('rotate-180');
+    });
   });
 </script>

@@ -1,6 +1,19 @@
 ---
-const services = ["Residential Roofing", "Commercial Roofing", "Copper Roofing", "Roof Maintenance", "Roof Coatings", "Tile Roofing", "Metal Roofing", "Skylights"];
-const locations = ["Fort Lauderdale", "Miami", "Orlando"];
+const services = [
+  { name: "Residential Roofing", href: "/service/residential-roofing" },
+  { name: "Commercial Roofing", href: "/service/commercial-roofing" },
+  { name: "Copper Roofing", href: "/service/copper-roofing" },
+  { name: "Roof Maintenance", href: "/service/roof-maintenance" },
+  { name: "Roof Coatings", href: "/service/roof-coatings" },
+  { name: "Tile Roofing", href: "/service/tile-roofing" },
+  { name: "Metal Roofing", href: "/service/metal-roofing" },
+  { name: "Skylights", href: "/service/skylights" },
+];
+const locations = [
+  { name: "Fort Lauderdale", href: "/location/jdm-roofing-repair-and-installation-fort-lauderdale" },
+  { name: "Miami", href: "/location/jdm-roofing-installation-miami" },
+  { name: "Orlando", href: "/location/jdm-roofing-installation-orlando" },
+];
 const currentYear = new Date().getFullYear();
 ---
 
@@ -38,7 +51,7 @@ const currentYear = new Date().getFullYear();
         <h3 class="font-heading text-xl tracking-wide mb-4">Our Services</h3>
         <ul class="space-y-1">
           {services.map((s) => (
-            <li><a href="/contact" class="text-gray-300 text-sm hover:text-white transition-colors">{s}</a></li>
+            <li><a href={s.href} class="text-gray-300 text-sm hover:text-white transition-colors">{s.name}</a></li>
           ))}
         </ul>
       </div>
@@ -47,13 +60,14 @@ const currentYear = new Date().getFullYear();
         <h3 class="font-heading text-xl tracking-wide mb-4">Service Areas</h3>
         <ul class="space-y-1">
           {locations.map((l) => (
-            <li><a href="/contact" class="text-gray-300 text-sm hover:text-white transition-colors">JDM Roofing {l}</a></li>
+            <li><a href={l.href} class="text-gray-300 text-sm hover:text-white transition-colors">JDM Roofing {l.name}</a></li>
           ))}
         </ul>
         <h3 class="font-heading text-xl tracking-wide mb-3 mt-6">Pages</h3>
         <ul class="space-y-1">
           <li><a href="/" class="text-gray-300 text-sm hover:text-white">Home</a></li>
           <li><a href="/about-us" class="text-gray-300 text-sm hover:text-white">About Us</a></li>
+          <li><a href="/service/industries" class="text-gray-300 text-sm hover:text-white">Industries</a></li>
           <li><a href="/gallery" class="text-gray-300 text-sm hover:text-white">Gallery</a></li>
           <li><a href="/contact" class="text-gray-300 text-sm hover:text-white">Contact</a></li>
         </ul>

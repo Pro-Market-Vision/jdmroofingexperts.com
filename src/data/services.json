@@ -2,26 +2,49 @@
   {
     "name": "Residential Roofing",
     "description": "Residential roofing is the process of installing, repairing, and maintaining the roofs of residential homes. It involves various materials and techniques to ensure the roof is durable, weather-resistant, and aesthetically pleasing.",
-    "image": "/images/services/residential.jpg"
+    "image": "/images/services/residential.jpg",
+    "slug": "residential-roofing"
   },
   {
     "name": "Commercial Roofing",
     "description": "Commercial roofing involves the installation, repair, and maintenance of roofs on commercial buildings, such as offices, warehouses, retail stores, and industrial facilities.",
-    "image": "/images/services/commercial.jpg"
+    "image": "/images/services/commercial.jpg",
+    "slug": "commercial-roofing"
   },
   {
     "name": "Copper Roofing",
     "description": "Choosing JDM Roofing for your copper roofing needs means opting for unparalleled craftsmanship and exceptional customer service. Our experienced professionals use the finest materials and latest techniques.",
-    "image": "/images/services/copper.webp"
+    "image": "/images/services/copper.webp",
+    "slug": "copper-roofing"
   },
   {
     "name": "Roof Maintenance",
     "description": "Roof maintenance involves regular inspections, cleaning, and repairs to ensure the longevity and functionality of a roof. Proper maintenance helps prevent minor issues from becoming major problems.",
-    "image": "/images/services/maintenance.jpg"
+    "image": "/images/services/maintenance.jpg",
+    "slug": "roof-maintenance"
   },
   {
     "name": "Roof Coatings",
     "description": "Roof coatings are protective layers applied to the surface of a roof to enhance its durability, extend its lifespan, and improve its performance against environmental elements.",
-    "image": "/images/services/coatings.webp"
+    "image": "/images/services/coatings.webp",
+    "slug": "roof-coatings"
+  },
+  {
+    "name": "Tile Roofing",
+    "description": "Expert tile roofing installation, repair, and maintenance. We offer a range of styles, colors, and finishes to complement your property's architecture while providing long-lasting protection.",
+    "image": "/images/services/residential.jpg",
+    "slug": "tile-roofing"
+  },
+  {
+    "name": "Metal Roofing",
+    "description": "Top-quality metal roofing solutions for both residential and commercial properties. Our team ensures your roof offers superior protection against the elements while enhancing your property's value.",
+    "image": "/images/services/commercial.jpg",
+    "slug": "metal-roofing"
+  },
+  {
+    "name": "Skylights",
+    "description": "Expert skylight installation, repair, and maintenance. Increase natural light, improve ventilation, and enhance the aesthetic appeal of your home or business with energy-efficient skylights.",
+    "image": "/images/services/residential.jpg",
+    "slug": "skylights"
   }
 ]
