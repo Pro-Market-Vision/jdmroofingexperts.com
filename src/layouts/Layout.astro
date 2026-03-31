@@ -6,9 +6,10 @@ import Footer from '../components/Footer.astro';
 interface Props {
   title: string;
   description?: string;
+  keywords?: string;
 }
 
-const { title, description = "JDM Roofing Repair & Installation — expert roofing services in Fort Lauderdale, Miami & Orlando. Residential & commercial. Free estimates. Call (954) 727-5425." } = Astro.props;
+const { title, description = "JDM Roofing Repair & Installation — expert roofing services in Fort Lauderdale, Miami & Orlando. Residential & commercial. Free estimates. Call (954) 727-5425.", keywords = "roofing repair Fort Lauderdale, roof installation, commercial roofing, residential roofing, metal roofing, tile roofing, roof replacement, Miami roofing, Orlando roofing, South Florida roofer" } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 <!doctype html>
@@ -19,6 +20,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <link rel="icon" href="/favicon.ico" />
     <link rel="canonical" href={canonicalURL.href} />
     <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="alternate" hreflang="en" href={canonicalURL.href} />
+    <link rel="alternate" hreflang="x-default" href={canonicalURL.href} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
@@ -72,6 +78,47 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         "bestRating": "5"
       },
       "sameAs": []
+    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://jdmroofingexperts.com/"
+        }
+      ]
+    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Roofing Services",
+      "provider": {
+        "@type": "RoofingContractor",
+        "name": "JDM Roofing Repair & Installation",
+        "url": "https://jdmroofingexperts.com"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Fort Lauderdale" },
+        { "@type": "City", "name": "Miami" },
+        { "@type": "City", "name": "Orlando" }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Roofing Services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Residential Roofing" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial Roofing" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Metal Roofing" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tile Roofing" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Roof Coatings" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Skylights" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Roof Maintenance" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Copper Roofing" } }
+        ]
+      }
     })} />
   </head>
   <body class="font-body text-gray-800 antialiased">
